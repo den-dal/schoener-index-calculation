@@ -39,7 +39,7 @@ otu_mat <- otu_mat[, rownames(meta_df), drop = FALSE]
 dim(otu_mat)
 otu_mat <- otu_mat[rowSums(otu_mat) >0, , drop = FALSE]
 
-### Collapse OTUs to Genus level ----
+### 2. Collapse OTUs to Genus level ----
 # Match taxonomy to OTU table by OTU IDs
 tax_df_sub <- tax_df[rownames(otu_mat), ]
 dim(tax_df_sub)
