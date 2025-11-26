@@ -1,4 +1,4 @@
-# schoener-index-calculation
+# FILTER data by YEAR
 ````
 library(phyloseq)
 library(dplyr)
