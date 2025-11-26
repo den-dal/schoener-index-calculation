@@ -91,3 +91,17 @@ write.table(schoener_mat,
            file = "Schoener_genus_by_Population2022_26112025.txt",
            sep = "\t", quote = FALSE, col.names = NA)
 ````
+### Bray–Curtis dissimilarity between Populations ----
+````
+# vegdist expects rows = samples, columns = species
+genus_pop_for_dist <- t(genus_pop_mat)  # rows = Populations, cols = genera
+
+bray_pop <- vegdist(genus_pop_for_dist, method = "bray")
+
+# If you want a full matrix:
+bray_pop_mat <- as.matrix(bray_pop)
+
+write.table(bray_pop_mat,
+            file = "BrayCurtis_Genus_by_Population2022_26112025.txt",
+            sep = "\t", quote = FALSE, col.names = NA)
+````
